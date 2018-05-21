@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structte_1_1AnyHash.html" title="Generic hash function object. " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node1" href="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml$cpp/types/integral_constant.html" title="std::false_type" alt="" coords="5,78,113,105"/>
+<area shape="rect" id="node2" href="$structte_1_1detail_1_1is__any__set.html" title="te::detail::is_any\l_set\&lt; T \&gt;" alt="" coords="185,5,304,47"/>
+<area shape="rect" id="node3" href="$structte_1_1detail_1_1is__equality__comparable.html" title="te::detail::is_equality\l_comparable\&lt; T, class \&gt;" alt="" coords="161,71,328,112"/>
+<area shape="rect" id="node4" href="$structte_1_1detail_1_1is__inequality__comparable.html" title="te::detail::is_inequality\l_comparable\&lt; T, class \&gt;" alt="" coords="161,136,328,177"/>
 </map>

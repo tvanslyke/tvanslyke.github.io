@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structte_1_1AnyValue.html" title="te::AnyValue\&lt; HashFn,\l Compare \&gt;" alt="" coords="5,5,164,47"/>
-<area shape="rect" id="node2" href="$structte_1_1detail_1_1TypedValue.html" title="This class is an implementation detail and is not part of the public interface of AnyValue..." alt="" coords="212,5,407,47"/>
-<area shape="rect" id="node3" href="$structte_1_1detail_1_1AnyValueLink.html" title="This class is an implementation detail and is not part of the public interface of AnyValue..." alt="" coords="455,39,649,80"/>
-<area shape="rect" id="node4" href="$structte_1_1ConstValueHolder.html" title="te::ConstValueHolder\l\&lt; Value \&gt;" alt="" coords="236,71,383,112"/>
+<area shape="rect" id="node1" href="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml$cpp/types/integral_constant.html" title="std::true_type" alt="" coords="5,101,108,127"/>
+<area shape="rect" id="node2" href="$structte_1_1detail_1_1is__any__set_3_01AnySet_3_01H_00_01E_00_01A_01_4_01_4.html" title="te::detail::is_any\l_set\&lt; AnySet\&lt; H, E, A \&gt; \&gt;" alt="" coords="173,5,355,47"/>
+<area shape="rect" id="node3" href="$structte_1_1detail_1_1is__equality__comparable_3_01T_00_01std_1_1enable__if__t_3_01true_00_01deca22d00132dd059e76149f286aa37ff95.html" title="te::detail::is_equality\l_comparable\&lt; T, std::enable\l_if_t\&lt; true, decltype((void)\l(std::declval\&lt; T \&gt;()==std::declval\l\&lt; T \&gt;())) \&gt; \&gt;" alt="" coords="156,71,372,157"/>
+<area shape="rect" id="node4" href="$structte_1_1detail_1_1is__inequality__comparable_3_01T_00_01std_1_1enable__if__t_3_01true_00_01d40f7f64fc2e79b99af593b072d1edb9a.html" title="te::detail::is_inequality\l_comparable\&lt; T, std::enable\l_if_t\&lt; true, decltype((void)\l(std::declval\&lt; T \&gt;() !=std::\ldeclval\&lt; T \&gt;()),(void) 0) \&gt; \&gt;" alt="" coords="170,181,358,266"/>
 </map>

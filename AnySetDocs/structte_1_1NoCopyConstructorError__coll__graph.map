@@ -1,3 +1,5 @@
 <map id="te::NoCopyConstructorError&lt; T &gt;" name="te::NoCopyConstructorError&lt; T &gt;">
-<area shape="rect" id="node2" href="$structte_1_1CopyConstructionError.html" title="Base type of NoCopyConstructorError. Thrown when attempting to make copies of an AnyValue instance th..." alt="" coords="27,80,201,107"/>
+<area shape="rect" id="node2" href="$structte_1_1CopyConstructionError.html" title="Base type of NoCopyConstructorError. Thrown when attempting to make copies of an AnyValue instance th..." alt="" coords="36,95,211,121"/>
+<area shape="rect" id="node3" href="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml$cpp/error/logic_error.html" title="std::logic_error" alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node4" href="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml$cpp/types/type_info.html" title="std::type_info" alt="" coords="138,5,239,32"/>
 </map>

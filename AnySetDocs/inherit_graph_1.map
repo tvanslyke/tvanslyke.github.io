@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$structte_1_1AnySet_1_1const__iterator.html" title="Forward iterator type returned from const operations on AnySet instances. " alt="" coords="179,5,325,61"/>
+<area shape="rect" id="node1" href="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml$cpp/utility/hash.html" title="std::hash\&lt; T \&gt;" alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node2" href="$structte_1_1Hash.html" title="Function object that implements a hash function for instances of type T. Inherits from std::hash&lt;T&gt; u..." alt="" coords="161,5,265,32"/>
 </map>

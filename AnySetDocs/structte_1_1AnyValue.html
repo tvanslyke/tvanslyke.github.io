@@ -68,7 +68,6 @@ $(function() {
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
-<a href="#related">Related Functions</a> &#124;
 <a href="structte_1_1AnyValue-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">te::AnyValue&lt; HashFn, Compare &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -81,7 +80,7 @@ class te::AnyValue&lt; HashFn, Compare &gt;</h3>
 <p>A <code>std::any</code> -like type that serves as the <code>value_type</code> for <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instances.</p>
 <p><a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instances are always dynamically-allocated and are typically owned by an <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance. <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> has no user-visible constructors and is neither copy nor move-assignable.</p>
 <p><a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instances can be spliced into and extracted from <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instances whose <code>HashFn</code> and <code>KeyEqual</code> types are the same as <code>HashFn</code> and <code>Compare</code> respectively.</p>
-<p>Following the conventions of <code>std::any</code>, the value contained in a particular <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance can be obtained using special 'cast' functions. The cast functions provided for <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> are <a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a>, <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a>, and <a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a>. Additionally, non-cast-style accessor and query functions <a class="el" href="structte_1_1AnyValue.html#a0b97a869d111b68fabac62d4c10418c7" title="Check if any_v contains an object of type T. ">is()</a>, <a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a>, and <a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> are provided as well.</p>
+<p>Following the conventions of <code>std::any</code>, the value contained in a particular <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance can be obtained using special 'cast' functions. The cast functions provided for <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> are <a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a>, <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a>, and <a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a>. Additionally, non-cast-style accessor and query functions <a class="el" href="structte_1_1AnyValue.html#a0b97a869d111b68fabac62d4c10418c7" title="Check if any_v contains an object of type T. ">is()</a>, <a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a>, <a class="el" href="structte_1_1AnyValue.html#af1c7bb7af258e5b3e4cd80a2b96b6c86">get()</a>, <a class="el" href="structte_1_1AnyValue.html#a1220a6bdc549f4ad1131245e0b928ffb" title="Get the contained value in any_v through a reference to const T. ">get_default_ref()</a>, <a class="el" href="structte_1_1AnyValue.html#a3b9857803d25555dd7a4307f9ecf4b1c" title="Get a copy of the contained value in any_v of type T. ">get_default_val()</a>, and <a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> are provided as well.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">HashFn</td><td>- The type of the hash function object used in the corresponding <code><a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a>&lt;<code>HashFn</code>,</code> <code>Compare&gt;</code> instances. </td></tr>
@@ -115,19 +114,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a51d2971f8b277000c09adcbea107c67c"><td class="memItemLeft" align="right" valign="top"><a id="a51d2971f8b277000c09adcbea107c67c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AnyValue</b> (<a class="el" href="structte_1_1AnyValue.html">AnyValue</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a51d2971f8b277000c09adcbea107c67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88b079f6ed8af088bd012c33e9d7b87e"><td class="memItemLeft" align="right" valign="top">virtual const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a88b079f6ed8af088bd012c33e9d7b87e">typeinfo</a> () const =0</td></tr>
-<tr class="memdesc:a88b079f6ed8af088bd012c33e9d7b87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to a std::type_info object that indicates the type of the contained object.  <a href="#a88b079f6ed8af088bd012c33e9d7b87e">More...</a><br /></td></tr>
+<tr class="memitem:a88b079f6ed8af088bd012c33e9d7b87e"><td class="memItemLeft" align="right" valign="top">virtual const <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/type_info.html">std::type_info</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a88b079f6ed8af088bd012c33e9d7b87e">typeinfo</a> () const =0</td></tr>
+<tr class="memdesc:a88b079f6ed8af088bd012c33e9d7b87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to a <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/type_info.html">std::type_info</a> object that indicates the type of the contained object.  <a href="#a88b079f6ed8af088bd012c33e9d7b87e">More...</a><br /></td></tr>
 <tr class="separator:a88b079f6ed8af088bd012c33e9d7b87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a50ee85dd2f51c8c2ddb59adeaf724a53"><td class="memItemLeft" align="right" valign="top">const std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a50ee85dd2f51c8c2ddb59adeaf724a53">hash</a></td></tr>
+<tr class="memitem:a50ee85dd2f51c8c2ddb59adeaf724a53"><td class="memItemLeft" align="right" valign="top">const <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a50ee85dd2f51c8c2ddb59adeaf724a53">hash</a></td></tr>
+<tr class="memdesc:a50ee85dd2f51c8c2ddb59adeaf724a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hash code obtained by invoking an instance of <code>HashFn</code> on the contained object.  <a href="#a50ee85dd2f51c8c2ddb59adeaf724a53">More...</a><br /></td></tr>
 <tr class="separator:a50ee85dd2f51c8c2ddb59adeaf724a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a06c0164c03474e50c6abaf1f757e2e0c"><td class="memItemLeft" align="right" valign="top"><a id="a06c0164c03474e50c6abaf1f757e2e0c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AnyValue</b> (std::size_t hash_v)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AnyValue</b> (<a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a> hash_v)</td></tr>
 <tr class="separator:a06c0164c03474e50c6abaf1f757e2e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4da7aea9c6293d8587c43b0762f3bf3b"><td class="memItemLeft" align="right" valign="top"><a id="a4da7aea9c6293d8587c43b0762f3bf3b"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>compare_to</b> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> &amp;other, Compare comp) const =0</td></tr>
@@ -139,10 +139,10 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>equals</b> (c
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>not_equals</b> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> &amp;other) const =0</td></tr>
 <tr class="separator:afbedde9bc4e04f11de75470adbfcc0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dee3846f267516c696d3b843a5bb009"><td class="memItemLeft" align="right" valign="top"><a id="a3dee3846f267516c696d3b843a5bb009"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (std::ostream &amp;os) const =0</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (<a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;os) const =0</td></tr>
 <tr class="separator:a3dee3846f267516c696d3b843a5bb009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54faba1a4c8203fb357e95f77a746088"><td class="memItemLeft" align="right" valign="top"><a id="a54faba1a4c8203fb357e95f77a746088"></a>
-virtual std::unique_ptr&lt; <a class="el" href="structte_1_1AnyValue.html">self_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const =0</td></tr>
+virtual <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt; <a class="el" href="structte_1_1AnyValue.html">self_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const =0</td></tr>
 <tr class="separator:a54faba1a4c8203fb357e95f77a746088"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -154,8 +154,8 @@ template&lt;class , class , class &gt; </td></tr>
 <tr class="memitem:a10faa13ea71f91beeef03c621baa1ac5"><td class="memItemLeft" align="right" valign="top"><a id="a10faa13ea71f91beeef03c621baa1ac5"></a>
 struct&#160;</td><td class="memItemRight" valign="bottom"><b>detail::AnyList&lt; HashFn, Compare &gt;</b></td></tr>
 <tr class="separator:a10faa13ea71f91beeef03c621baa1ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fdbab3b6b1253377aa978eafdb57182"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a0fdbab3b6b1253377aa978eafdb57182">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> &amp;any_v)</td></tr>
-<tr class="memdesc:a0fdbab3b6b1253377aa978eafdb57182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the contained object to the given <code>std::ostream</code> using the stream insertion &lt;&lt; operator.  <a href="#a0fdbab3b6b1253377aa978eafdb57182">More...</a><br /></td></tr>
+<tr class="memitem:a0fdbab3b6b1253377aa978eafdb57182"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a0fdbab3b6b1253377aa978eafdb57182">operator&lt;&lt;</a> (<a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;os, const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> &amp;any_v)</td></tr>
+<tr class="memdesc:a0fdbab3b6b1253377aa978eafdb57182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the contained object to the given <code><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a></code> using the stream insertion &lt;&lt; operator.  <a href="#a0fdbab3b6b1253377aa978eafdb57182">More...</a><br /></td></tr>
 <tr class="separator:a0fdbab3b6b1253377aa978eafdb57182"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Comparison Operations</div></td></tr>
 <tr class="memitem:a9feea4728645709078336cf47e78a0c3"><td class="memTemplParams" colspan="2"><a id="a9feea4728645709078336cf47e78a0c3"></a>
@@ -200,18 +200,23 @@ template&lt;class T &gt; </td></tr>
 Related Functions</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>(Note that these are not member functions.) </p>
 </td></tr>
+<tr><td colspan="2"><div class="groupHeader">Queries</div></td></tr>
 <tr class="memitem:a0b97a869d111b68fabac62d4c10418c7"><td class="memTemplParams" colspan="2">template&lt;class T , class H , class C &gt; </td></tr>
 <tr class="memitem:a0b97a869d111b68fabac62d4c10418c7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a0b97a869d111b68fabac62d4c10418c7">is</a> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &amp;any_v)</td></tr>
 <tr class="memdesc:a0b97a869d111b68fabac62d4c10418c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if <code>any_v</code> contains an object of type T.  <a href="#a0b97a869d111b68fabac62d4c10418c7">More...</a><br /></td></tr>
 <tr class="separator:a0b97a869d111b68fabac62d4c10418c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Maker/Factory Functions</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Note that these functions are intended <em>primarilly</em> for internal use. </p>
+</div></td></tr>
 <tr class="memitem:a298980cc2cc2c9dc1abffe6e5393be06"><td class="memTemplParams" colspan="2">template&lt;class T , class H , class C , class ... Args&gt; </td></tr>
-<tr class="memitem:a298980cc2cc2c9dc1abffe6e5393be06"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a298980cc2cc2c9dc1abffe6e5393be06">make_any_value</a> (std::size_t hash_value, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a298980cc2cc2c9dc1abffe6e5393be06"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt; <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a298980cc2cc2c9dc1abffe6e5393be06">make_any_value</a> (<a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a> hash_value, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a298980cc2cc2c9dc1abffe6e5393be06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt;AnyValue&lt;H, C&gt;&gt; suitable for splicing into an <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance.  <a href="#a298980cc2cc2c9dc1abffe6e5393be06">More...</a><br /></td></tr>
 <tr class="separator:a298980cc2cc2c9dc1abffe6e5393be06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a117089927a63d45e7f74465d6c42f043"><td class="memTemplParams" colspan="2">template&lt;class T , class H , class C , class ... Args&gt; </td></tr>
-<tr class="memitem:a117089927a63d45e7f74465d6c42f043"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a117089927a63d45e7f74465d6c42f043">make_any_value</a> (H hasher, Args &amp;&amp;... args)</td></tr>
-<tr class="memdesc:a117089927a63d45e7f74465d6c42f043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a std::unique_ptr&lt;AnyValue&lt;H, C&gt;&gt; suitable for splicing into an <code><a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a>&lt;<code>H</code>,</code> <code>C&gt;</code> instance.  <a href="#a117089927a63d45e7f74465d6c42f043">More...</a><br /></td></tr>
+<tr class="memitem:a117089927a63d45e7f74465d6c42f043"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt; <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a117089927a63d45e7f74465d6c42f043">make_any_value</a> (H hasher, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a117089927a63d45e7f74465d6c42f043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt;AnyValue&lt;H, C&gt;&gt; suitable for splicing into an <code><a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a>&lt;<code>H</code>,</code> <code>C&gt;</code> instance.  <a href="#a117089927a63d45e7f74465d6c42f043">More...</a><br /></td></tr>
 <tr class="separator:a117089927a63d45e7f74465d6c42f043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Casts and Accessors</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Casts</div></td></tr>
 <tr class="memitem:af4d90407920686c0d304f48e6661b8ea"><td class="memTemplParams" colspan="2">template&lt;class To , class H , class C &gt; </td></tr>
 <tr class="memitem:af4d90407920686c0d304f48e6661b8ea"><td class="memTemplItemLeft" align="right" valign="top">To&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea">polymorphic_cast</a> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &amp;any_v)</td></tr>
 <tr class="memdesc:af4d90407920686c0d304f48e6661b8ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the contained object through a reference to dynamic type <code>To</code>.  <a href="#af4d90407920686c0d304f48e6661b8ea">More...</a><br /></td></tr>
@@ -232,13 +237,14 @@ Related Functions</h2></td></tr>
 <tr class="memitem:a8862ffbba80ea1a12cc2117348c4efe8"><td class="memTemplItemLeft" align="right" valign="top">To&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8">unsafe_cast</a> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &amp;any_v)</td></tr>
 <tr class="memdesc:a8862ffbba80ea1a12cc2117348c4efe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the contained object without dynamic type checking.  <a href="#a8862ffbba80ea1a12cc2117348c4efe8">More...</a><br /></td></tr>
 <tr class="separator:a8862ffbba80ea1a12cc2117348c4efe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Higher-Level Accessors</div></td></tr>
 <tr class="memitem:aa7e03e69265821ef1f2fcfef7c635ae4"><td class="memTemplParams" colspan="2">template&lt;class T , class H , class C &gt; </td></tr>
 <tr class="memitem:aa7e03e69265821ef1f2fcfef7c635ae4"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4">try_as</a> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &amp;any_v)</td></tr>
 <tr class="memdesc:aa7e03e69265821ef1f2fcfef7c635ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the contained object of type T. If the contained object is not an instance of type T, returns nullptr.  <a href="#aa7e03e69265821ef1f2fcfef7c635ae4">More...</a><br /></td></tr>
 <tr class="separator:aa7e03e69265821ef1f2fcfef7c635ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad973f276438df3501add140e0d4cddd8"><td class="memTemplParams" colspan="2">template&lt;class T , class H , class C &gt; </td></tr>
 <tr class="memitem:ad973f276438df3501add140e0d4cddd8"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8">as</a> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &amp;self)</td></tr>
-<tr class="memdesc:ad973f276438df3501add140e0d4cddd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the contained object of type T. If the contained object is not an instance of type T, throws a std::bad_cast.  <a href="#ad973f276438df3501add140e0d4cddd8">More...</a><br /></td></tr>
+<tr class="memdesc:ad973f276438df3501add140e0d4cddd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the contained object of type T. If the contained object is not an instance of type T, throws a <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/bad_cast.html">std::bad_cast</a>.  <a href="#ad973f276438df3501add140e0d4cddd8">More...</a><br /></td></tr>
 <tr class="separator:ad973f276438df3501add140e0d4cddd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1c7bb7af258e5b3e4cd80a2b96b6c86"><td class="memTemplParams" colspan="2">template&lt;class T , class H , class C &gt; </td></tr>
 <tr class="memitem:af1c7bb7af258e5b3e4cd80a2b96b6c86"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#af1c7bb7af258e5b3e4cd80a2b96b6c86">get</a> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &amp;any_v)</td></tr>
@@ -247,10 +253,10 @@ Related Functions</h2></td></tr>
 <tr class="memitem:a1220a6bdc549f4ad1131245e0b928ffb"><td class="memTemplItemLeft" align="right" valign="top">const std::decay_t&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a1220a6bdc549f4ad1131245e0b928ffb">get_default_ref</a> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &amp;any_v, DefaultRef &amp;&amp;default_ref)</td></tr>
 <tr class="memdesc:a1220a6bdc549f4ad1131245e0b928ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the contained value in <code>any_v</code> through a reference to const <code>T</code>.  <a href="#a1220a6bdc549f4ad1131245e0b928ffb">More...</a><br /></td></tr>
 <tr class="separator:a1220a6bdc549f4ad1131245e0b928ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf49298569bce9b8de8782a5e707672a"><td class="memTemplParams" colspan="2">template&lt;class T , class H , class C , class DefaultVal &gt; </td></tr>
-<tr class="memitem:abf49298569bce9b8de8782a5e707672a"><td class="memTemplItemLeft" align="right" valign="top">std::decay_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#abf49298569bce9b8de8782a5e707672a">get_default_val</a> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &amp;any_v, DefaultVal &amp;&amp;default_val)</td></tr>
-<tr class="memdesc:abf49298569bce9b8de8782a5e707672a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a copy of the contained value in <code>any_v</code> of type <code>T</code>.  <a href="#abf49298569bce9b8de8782a5e707672a">More...</a><br /></td></tr>
-<tr class="separator:abf49298569bce9b8de8782a5e707672a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b9857803d25555dd7a4307f9ecf4b1c"><td class="memTemplParams" colspan="2">template&lt;class T , class H , class C , class DefaultVal &gt; </td></tr>
+<tr class="memitem:a3b9857803d25555dd7a4307f9ecf4b1c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyValue.html#a3b9857803d25555dd7a4307f9ecf4b1c">get_default_val</a> (const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &amp;any_v, DefaultVal &amp;&amp;default_val)</td></tr>
+<tr class="memdesc:a3b9857803d25555dd7a4307f9ecf4b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a copy of the contained value in <code>any_v</code> of type <code>T</code>.  <a href="#a3b9857803d25555dd7a4307f9ecf4b1c">More...</a><br /></td></tr>
+<tr class="separator:a3b9857803d25555dd7a4307f9ecf4b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a88b079f6ed8af088bd012c33e9d7b87e"></a>
@@ -265,7 +271,7 @@ template&lt;class HashFn, class Compare&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::type_info&amp; <a class="el" href="structte_1_1AnyValue.html">te::AnyValue</a>&lt; HashFn, Compare &gt;::typeinfo </td>
+          <td class="memname">virtual const <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/type_info.html">std::type_info</a>&amp; <a class="el" href="structte_1_1AnyValue.html">te::AnyValue</a>&lt; HashFn, Compare &gt;::typeinfo </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -278,8 +284,8 @@ template&lt;class HashFn, class Compare&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get a reference to a std::type_info object that indicates the type of the contained object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A std::type_info object that indicates the type of the contained object. </dd></dl>
+<p>Get a reference to a <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/type_info.html">std::type_info</a> object that indicates the type of the contained object. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/type_info.html">std::type_info</a> object that indicates the type of the contained object. </dd></dl>
 
 <p>Implemented in <a class="el" href="structte_1_1detail_1_1TypedValue.html#a6df86b446b11958f2bb15acb19674efe">te::detail::TypedValue&lt; Value, HashFn, Compare &gt;</a>.</p>
 
@@ -312,8 +318,14 @@ template&lt;class T , class H , class C &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get a reference to the contained object of type T. If the contained object is not an instance of type T, throws a std::bad_cast. </p>
+<p>Get a reference to the contained object of type T. If the contained object is not an instance of type T, throws a <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/bad_cast.html">std::bad_cast</a>. </p>
 <p>This function works by attempting an <a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a> followed by, if the <a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a> failed, a <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a>. The <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a> is only attempted if <code>T</code> is a non-final class type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>- The type of the contained value, absent of reference (&amp;) or const/volatile qualifiers.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">any_v</td><td>- The <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance whose contained object is to be accessed.</td></tr>
@@ -323,17 +335,17 @@ template&lt;class T , class H , class C &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>A reference of type <code>const T&amp;</code> to the contained object.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::bad_cast</td><td></td></tr>
+    <tr><td class="paramname"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/bad_cast.html">std::bad_cast</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#af1c7bb7af258e5b3e4cd80a2b96b6c86">get()</a> </dd>
 <dd>
-<a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a> </dd>
+<a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> </dd>
 <dd>
-<a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a> </dd>
+<a class="el" href="structte_1_1AnyValue.html#a1220a6bdc549f4ad1131245e0b928ffb" title="Get the contained value in any_v through a reference to const T. ">get_default_ref()</a> </dd>
 <dd>
-<a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a> </dd>
+<a class="el" href="structte_1_1AnyValue.html#a3b9857803d25555dd7a4307f9ecf4b1c" title="Get a copy of the contained value in any_v of type T. ">get_default_val()</a> </dd>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
@@ -535,7 +547,7 @@ template&lt;class To , class H , class C &gt; </div>
 </div><div class="memdoc">
 
 <p>Access the contained object. </p>
-<p>If the type of contained object is not the same as the requested type (after stripping off references and cv qualifiers, i.e. std::decay), throws a <code>std::bad_cast</code>.</p>
+<p>If the type of contained object is not the same as the requested type (after stripping off references and cv qualifiers, i.e. <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/decay.html">std::decay</a>), throws a <code><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/bad_cast.html">std::bad_cast</a></code>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">To</td><td>- The type to access the contained object as. May be a reference or value type.</td></tr>
@@ -551,17 +563,13 @@ template&lt;class To , class H , class C &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>A reference to (or copy of, if <code>To</code> is a non-reference type) the contained object.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::bad_cast</td><td></td></tr>
+    <tr><td class="paramname"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/bad_cast.html">std::bad_cast</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a> </dd>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a> </dd>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
@@ -612,10 +620,6 @@ template&lt;class To , class H , class C &gt; </div>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a> </dd>
 <dd>
-<a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a> </dd>
-<dd>
 <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
 </div>
@@ -648,9 +652,13 @@ template&lt;class T , class H , class C &gt; </div>
 <p>Equivalent to <a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a> </dd>
 <dd>
+<a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> </dd>
+<dd>
 <a class="el" href="structte_1_1AnyValue.html#a1220a6bdc549f4ad1131245e0b928ffb" title="Get the contained value in any_v through a reference to const T. ">get_default_ref()</a> </dd>
 <dd>
-<a class="el" href="structte_1_1AnyValue.html#abf49298569bce9b8de8782a5e707672a" title="Get a copy of the contained value in any_v of type T. ">get_default_val()</a> </dd></dl>
+<a class="el" href="structte_1_1AnyValue.html#a3b9857803d25555dd7a4307f9ecf4b1c" title="Get a copy of the contained value in any_v of type T. ">get_default_val()</a> </dd>
+<dd>
+<a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
 </div>
 </div>
@@ -695,7 +703,7 @@ template&lt;class T , class H , class C , class DefaultRef &gt; </div>
 <dl class="section note"><dt>Note</dt><dd>If <code>default_ref</code> is not an lvalue reference to <code>T</code>, the call fails to compile (via static_assert). This is to prevent silently returning a dangling reference to <code>T</code>. See <a href="https://youtu.be/3MB2iiCkGxg?t=762">this talk</a> for further details and justification.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>- The type to access, absent of reference (&amp;) or const/volatile qualifiers.</td></tr>
+    <tr><td class="paramname">T</td><td>- The type of the contained value, absent of reference (&amp;) or const/volatile qualifiers.</td></tr>
   </table>
   </dd>
 </dl>
@@ -707,14 +715,20 @@ template&lt;class T , class H , class C , class DefaultRef &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A const reference to the object of type <code>T</code> contained in <code>any_v</code>, or <code>default_ref</code> if <code>any_v</code> does not contain an object of type <code>T</code>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#af1c7bb7af258e5b3e4cd80a2b96b6c86">get()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a> </dd>
 <dd>
-<a class="el" href="structte_1_1AnyValue.html#abf49298569bce9b8de8782a5e707672a" title="Get a copy of the contained value in any_v of type T. ">get_default_val()</a> </dd></dl>
+<a class="el" href="structte_1_1AnyValue.html#af1c7bb7af258e5b3e4cd80a2b96b6c86">get()</a> </dd>
+<dd>
+<a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> </dd>
+<dd>
+<a class="el" href="structte_1_1AnyValue.html#a3b9857803d25555dd7a4307f9ecf4b1c" title="Get a copy of the contained value in any_v of type T. ">get_default_val()</a> </dd>
+<dd>
+<a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
 </div>
 </div>
-<a id="abf49298569bce9b8de8782a5e707672a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf49298569bce9b8de8782a5e707672a">&#9670;&nbsp;</a></span>get_default_val()</h2>
+<a id="a3b9857803d25555dd7a4307f9ecf4b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b9857803d25555dd7a4307f9ecf4b1c">&#9670;&nbsp;</a></span>get_default_val()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -725,7 +739,7 @@ template&lt;class T , class H , class C , class DefaultVal &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::decay_t&lt; T &gt; get_default_val </td>
+          <td class="memname">T get_default_val </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &amp;&#160;</td>
           <td class="paramname"><em>any_v</em>, </td>
@@ -766,9 +780,15 @@ template&lt;class T , class H , class C , class DefaultVal &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If <code>any_v</code> contains an object of type <code>T</code>, returns a copy of the constained object, otherwise, returns an instance of type <code>T</code> constructed from <code>default_val</code>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#af1c7bb7af258e5b3e4cd80a2b96b6c86">get()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a> </dd>
 <dd>
-<a class="el" href="structte_1_1AnyValue.html#a1220a6bdc549f4ad1131245e0b928ffb" title="Get the contained value in any_v through a reference to const T. ">get_default_ref()</a> </dd></dl>
+<a class="el" href="structte_1_1AnyValue.html#af1c7bb7af258e5b3e4cd80a2b96b6c86">get()</a> </dd>
+<dd>
+<a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> </dd>
+<dd>
+<a class="el" href="structte_1_1AnyValue.html#a1220a6bdc549f4ad1131245e0b928ffb" title="Get the contained value in any_v through a reference to const T. ">get_default_ref()</a> </dd>
+<dd>
+<a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
 </div>
 </div>
@@ -799,6 +819,13 @@ template&lt;class T , class H , class C &gt; </div>
 </div><div class="memdoc">
 
 <p>Check if <code>any_v</code> contains an object of type T. </p>
+<p><code>T</code> must match the contained type exactly; <a class="el" href="structte_1_1AnyValue.html#a0b97a869d111b68fabac62d4c10418c7" title="Check if any_v contains an object of type T. ">is()</a> returns false, even if T is an accessible base of the type of the contained object.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>- The type of the contained value, absent of reference (&amp;) or const/volatile qualifiers.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">any_v</td><td>- The <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance whose contained type is to be queried.</td></tr>
@@ -806,11 +833,7 @@ template&lt;class T , class H , class C &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance contains an object of type T, false otherwise.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
 </div>
 </div>
@@ -826,9 +849,9 @@ template&lt;class T , class H , class C , class ... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &gt; make_any_value </td>
+          <td class="memname"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt; <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &gt; make_any_value </td>
           <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a>&#160;</td>
           <td class="paramname"><em>hash_value</em>, </td>
         </tr>
         <tr>
@@ -850,13 +873,12 @@ template&lt;class T , class H , class C , class ... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p></p>
-<p>Constructs a std::unique_ptr&lt;AnyValue&lt;H, C&gt;&gt; suitable for splicing into an <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance.</p>
+<p>Constructs a <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt;AnyValue&lt;H, C&gt;&gt; suitable for splicing into an <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>- The type of the contained value. </td></tr>
-    <tr><td class="paramname">H</td><td>- The type of hash function object used by <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instances that </td></tr>
-    <tr><td class="paramname">C</td><td>- The type of the contained value.</td></tr>
+    <tr><td class="paramname">H</td><td>- The type of the hash function object used by <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instances that the returned <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance can be spliced into. </td></tr>
+    <tr><td class="paramname">H</td><td>- The type of the comparison (KeyEqual) function object used by <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instances that the returned <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance can be spliced into.</td></tr>
   </table>
   </dd>
 </dl>
@@ -867,7 +889,7 @@ template&lt;class T , class H , class C , class ... Args&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd><code>hash_value</code> is a "trust me" argument. Only call this overload if you are absolutely sure of what the hash code of the constructed object will be. Use of this overload is appropriate, for example, when move-constructing a long std::string whose hash has already been computed.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd><code>hash_value</code> is a "trust me" argument. Only call this overload if you are absolutely sure of what the hash code of the constructed object will be. Use of this overload is appropriate, for example, when move-constructing a long <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> whose hash has already been computed.</dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Throws any exceptions thrown by <code>T</code>'s constructor, by calling <code>hasher</code> with the constructed value of <code>T</code>, or by std::make_unique();</dd></dl>
 
 </div>
@@ -884,7 +906,7 @@ template&lt;class T , class H , class C , class ... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &gt; make_any_value </td>
+          <td class="memname"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt; <a class="el" href="structte_1_1AnyValue.html">AnyValue</a>&lt; H, C &gt; &gt; make_any_value </td>
           <td>(</td>
           <td class="paramtype">H&#160;</td>
           <td class="paramname"><em>hasher</em>, </td>
@@ -908,12 +930,12 @@ template&lt;class T , class H , class C , class ... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a std::unique_ptr&lt;AnyValue&lt;H, C&gt;&gt; suitable for splicing into an <code><a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a>&lt;<code>H</code>,</code> <code>C&gt;</code> instance. </p>
+<p>Constructs a <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/memory/unique_ptr.html">std::unique_ptr</a>&lt;AnyValue&lt;H, C&gt;&gt; suitable for splicing into an <code><a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a>&lt;<code>H</code>,</code> <code>C&gt;</code> instance. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>- The type of the contained value. </td></tr>
-    <tr><td class="paramname">H</td><td>- The type of hash function object used by <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instances that </td></tr>
-    <tr><td class="paramname">C</td><td>- The type of the contained value.</td></tr>
+    <tr><td class="paramname">H</td><td>- The type of the hash function object used by <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instances that the returned <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance can be spliced into. </td></tr>
+    <tr><td class="paramname">H</td><td>- The type of the comparison (KeyEqual) function object used by <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instances that the returned <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance can be spliced into.</td></tr>
   </table>
   </dd>
 </dl>
@@ -982,9 +1004,9 @@ template&lt;class HashFn, class Compare&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td class="memname"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a>&amp; operator&lt;&lt; </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramtype"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;&#160;</td>
           <td class="paramname"><em>os</em>, </td>
         </tr>
         <tr>
@@ -1006,8 +1028,8 @@ template&lt;class HashFn, class Compare&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Write the contained object to the given <code>std::ostream</code> using the stream insertion &lt;&lt; operator. </p>
-<dl class="section note"><dt>Note</dt><dd>If the contained object is of a type that is not streamable (has no <code>operator&lt;&lt;</code>(<code>std::ostream</code>, <code>const</code> <code>T&amp;</code>) overload), writes a string of the form "AnyValue(typeid.name='&lt;typeid(T).name()&gt;', hash=&lt;hash code&gt;)". </dd></dl>
+<p>Write the contained object to the given <code><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a></code> using the stream insertion &lt;&lt; operator. </p>
+<dl class="section note"><dt>Note</dt><dd>If the contained object is of a type that is not streamable (has no <code>operator&lt;&lt;</code>(<code><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a></code>, <code>const</code> <code>T&amp;</code>) overload), writes a string of the form "AnyValue(typeid.name='&lt;typeid(T).name()&gt;', hash=&lt;hash code&gt;)". </dd></dl>
 
 </div>
 </div>
@@ -1080,10 +1102,10 @@ template&lt;class To , class H , class C &gt; </div>
 </div><div class="memdoc">
 
 <p>Access the contained object through a reference to dynamic type <code>To</code>. </p>
-<p>Unlike <code><a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a></code> or <code><a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a></code>, <code><a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a></code> can access the <code><a class="el" href="structte_1_1AnyValue.html">AnyValue</a></code> instance's contained object through a reference to a base type of the contained object. For example, an <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance which contains an object of type <code>std::runtime_error</code> could be <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a>'d to <code>const std::exception&amp;</code>.</p>
+<p>Unlike <code><a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a></code> or <code><a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a></code>, <code><a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a></code> can access the <code><a class="el" href="structte_1_1AnyValue.html">AnyValue</a></code> instance's contained object through a reference to a base type of the contained object. For example, an <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance which contains an object of type <code><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/error/runtime_error.html">std::runtime_error</a></code> could be <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a>'d to <code>const <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/error/exception.html">std::exception</a>&amp;</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Neither the type of the contained object nor target type of the cast need be of polymorphic type for this cast to work. <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a> can cast through non-polymorphic inheritence heirarchies.</dd></dl>
-<p>If the contained object is of non-class type, throws a <code>std::bad_cast</code>.</p>
-<p>If the contained object is an instance of a final class type, throws a <code>std::bad_cast</code>, even if the contained object is an instance of <code>To</code>.</p>
+<p>If the contained object is of non-class type, throws a <code><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/bad_cast.html">std::bad_cast</a></code>.</p>
+<p>If the contained object is an instance of a final class type, throws a <code><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/bad_cast.html">std::bad_cast</a></code>, even if the contained object is an instance of <code>To</code>.</p>
 <p>If <code>To</code> is a reference to non-class or final class type, the cast fails to compile.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -1100,17 +1122,13 @@ template&lt;class To , class H , class C &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the contained object of the requested type.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::bad_cast</td><td></td></tr>
+    <tr><td class="paramname"><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/bad_cast.html">std::bad_cast</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a> </dd>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a> </dd>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
@@ -1143,7 +1161,7 @@ template&lt;class To , class H , class C &gt; </div>
 </div><div class="memdoc">
 
 <p>Access the contained object through a pointer to dynamic type <code>To</code>. </p>
-<p>Unlike <code><a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a></code> or <code><a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a></code>, <code><a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a></code> can access the <code><a class="el" href="structte_1_1AnyValue.html">AnyValue</a></code> instance's contained object through a (possibly polymorphic) pointer to a base type of the contained object. For example, an <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance which contains an object of type <code>std::runtime_error</code> could be <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a>'d to <code>const std::exception*</code>.</p>
+<p>Unlike <code><a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a></code> or <code><a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a></code>, <code><a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a></code> can access the <code><a class="el" href="structte_1_1AnyValue.html">AnyValue</a></code> instance's contained object through a (possibly polymorphic) pointer to a base type of the contained object. For example, an <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance which contains an object of type <code><a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/error/runtime_error.html">std::runtime_error</a></code> could be <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a>'d to <code>const <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/error/exception.html">std::exception</a>*</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Neither the type of the contained object nor target type of the cast need be of polymorphic type for this cast to work. <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a> can cast through non-polymorphic inheritence heirarchies.</dd></dl>
 <p>If the contained object is of non-class type, returns <code>nullptr</code>.</p>
 <p>If the contained object is an instance of a final class type, returns <code>nullptr</code>, even if the contained object is an instance of <code>To</code>.</p>
@@ -1164,10 +1182,6 @@ template&lt;class To , class H , class C &gt; </div>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a> </dd>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a> </dd>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
@@ -1201,6 +1215,12 @@ template&lt;class T , class H , class C &gt; </div>
 
 <p>Get a pointer to the contained object of type T. If the contained object is not an instance of type T, returns nullptr. </p>
 <p>This function works by attempting to return <code>te::exact_cast&lt;const T*&gt;(&amp;self)</code> followed by a <code>te::polymorphic_cast&lt;const T*&gt;(&amp;self)</code> if the <a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a> failed. The <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a> is only attempted if <code>T</code> is a non-final class type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>- The type of the contained value, absent of reference (&amp;) or const/volatile qualifiers.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">any_v</td><td>- The <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> instance whose contained object is to be accessed.</td></tr>
@@ -1208,13 +1228,13 @@ template&lt;class T , class H , class C &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer of type <code>const T*</code> to the contained object if the contained object has type <code>T</code>, otherwise null.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a> </dd>
 <dd>
-<a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a> </dd>
+<a class="el" href="structte_1_1AnyValue.html#af1c7bb7af258e5b3e4cd80a2b96b6c86">get()</a> </dd>
 <dd>
-<a class="el" href="structte_1_1AnyValue.html#a8862ffbba80ea1a12cc2117348c4efe8" title="Access the contained object without dynamic type checking. ">unsafe_cast()</a> </dd>
+<a class="el" href="structte_1_1AnyValue.html#a1220a6bdc549f4ad1131245e0b928ffb" title="Get the contained value in any_v through a reference to const T. ">get_default_ref()</a> </dd>
 <dd>
-<a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a> </dd>
+<a class="el" href="structte_1_1AnyValue.html#a3b9857803d25555dd7a4307f9ecf4b1c" title="Get a copy of the contained value in any_v of type T. ">get_default_val()</a> </dd>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
@@ -1247,7 +1267,7 @@ template&lt;class To , class H , class C &gt; </div>
 </div><div class="memdoc">
 
 <p>Access the contained object without dynamic type checking. </p>
-<p>If the type of contained object is not the same as the requested type (after stripping off top-level reference and then cv qualifiers, i.e. std::decay), then the behavior is undefined.</p>
+<p>If the type of contained object is not the same as the requested type (after stripping off top-level reference and then cv qualifiers, i.e. <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/decay.html">std::decay</a>), then the behavior is undefined.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">To</td><td>- The type to access the contained object as. Must be the type of the contained object or const reference thereto.</td></tr>
@@ -1260,14 +1280,10 @@ template&lt;class To , class H , class C &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the contained object of type T.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the contained object if <code>To</code> is a reference type, or a copy if <code>To</code> is a non-reference type</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html#ab870f1e471f93b1e6a281471ffa17363" title="Access the contained object. ">exact_cast()</a> </dd>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html#af4d90407920686c0d304f48e6661b8ea" title="Access the contained object through a reference to dynamic type To. ">polymorphic_cast()</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#aa7e03e69265821ef1f2fcfef7c635ae4" title="Get a pointer to the contained object of type T. If the contained object is not an instance of type T...">try_as()</a> </dd>
-<dd>
-<a class="el" href="structte_1_1AnyValue.html#ad973f276438df3501add140e0d4cddd8" title="Get a reference to the contained object of type T. If the contained object is not an instance of type...">as()</a> </dd>
 <dd>
 <a class="el" href="structte_1_1AnyValue.html">AnyValue</a> </dd></dl>
 
@@ -1283,11 +1299,13 @@ template&lt;class To , class H , class C &gt; </div>
 template&lt;class HashFn, class Compare&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const std::size_t <a class="el" href="structte_1_1AnyValue.html">te::AnyValue</a>&lt; HashFn, Compare &gt;::hash</td>
+          <td class="memname">const <a class="elRef" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/size_t.html">std::size_t</a> <a class="el" href="structte_1_1AnyValue.html">te::AnyValue</a>&lt; HashFn, Compare &gt;::hash</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>The hash code obtained by invoking an instance of <code>HashFn</code> on the contained object. </p>
+<p>This member data member is provided primarilly so that lookup in an <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance can "fail fast". Mismatched <code>hash</code> values can indicate object inequality and elide the need to access the contained object, which requires virtual dispatch. </p>
 
 </div>
 </div>
@@ -1298,6 +1316,14 @@ Inheritance diagram for te::AnyValue&lt; HashFn, Compare &gt;:</div>
 <map name="te_1_1AnyValue_3_01HashFn_00_01Compare_01_4_inherit__map" id="te_1_1AnyValue_3_01HashFn_00_01Compare_01_4_inherit__map">
 <area shape="rect" id="node2" href="structte_1_1detail_1_1TypedValue.html" title="This class is an implementation detail and is not part of the public interface of AnyValue..." alt="" coords="26,95,179,136"/>
 <area shape="rect" id="node3" href="structte_1_1detail_1_1AnyValueLink.html" title="This class is an implementation detail and is not part of the public interface of AnyValue..." alt="" coords="5,184,200,225"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for te::AnyValue&lt; HashFn, Compare &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="structte_1_1AnyValue__coll__graph.png" border="0" usemap="#te_1_1AnyValue_3_01HashFn_00_01Compare_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="te_1_1AnyValue_3_01HashFn_00_01Compare_01_4_coll__map" id="te_1_1AnyValue_3_01HashFn_00_01Compare_01_4_coll__map">
+<area shape="rect" id="node2" doxygen="/home/tim/Projects/AnySet/doc/cppreference.tagfile/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/size_t.html" title="std::size_t" alt="" coords="43,5,126,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <hr/>The documentation for this class was generated from the following file:<ul>
