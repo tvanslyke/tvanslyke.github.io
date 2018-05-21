@@ -91,7 +91,7 @@ struct te::AnySet&lt; HashFn, KeyEqual, Allocator &gt;</h3>
 <dl class="section remark"><dt>Remarks</dt><dd>The STL's allocator model is too rigid for <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> to sanely support customized allocation of its internal nodes. Thus its internal elements/nodes are simply allocated using std::make_unique() (effectively using the keyword 'new'). Allocator support is only provided for the internal bucket table.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1AnyValue.html">AnyValue</a> - User-visible <code><a class="el" href="structte_1_1AnySet.html#a2a15e80792ba9325429a42bbe2325e73" title="AnyValue. ">value_type</a></code> for <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instances. </dd>
 <dd>
-<a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a> - The default value of HashFn. It <a class="el" href="structte_1_1AnyValue.html#a0b97a869d111b68fabac62d4c10418c7" title="Check if any_v contains an object of type T. ">is</a> intended to be sufficiently extensible such that users should not need to roll their own HashFn types. </dd></dl>
+<a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a> - The default value of HashFn. It is intended to be sufficiently extensible such that users should not need to roll their own HashFn types. </dd></dl>
 </div>
 <p><code>#include &lt;<a class="el" href="AnySet_8h_source.html">AnySet.h</a>&gt;</code></p>
 <table class="memberdecls">
