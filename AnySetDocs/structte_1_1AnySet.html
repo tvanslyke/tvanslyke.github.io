@@ -455,10 +455,10 @@ Friends</h2></td></tr>
 Related Functions</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>(Note that these are not member functions.) </p>
 </td></tr>
-<tr class="memitem:a2fa591e523143c4d4942f4ebbaf4fd1b"><td class="memTemplParams" colspan="2">template&lt;class HashFn  = te::AnyHash, class KeyEqual  = std::equal_to&lt;&gt;, class Allocator  = std::allocator&lt;te::AnyValue&lt;HashFn, KeyEqual&gt;&gt;, class ... Elements&gt; </td></tr>
-<tr class="memitem:a2fa591e523143c4d4942f4ebbaf4fd1b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structte_1_1AnySet.html">te::AnySet</a>&lt; HashFn, KeyEqual, Allocator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnySet.html#a2fa591e523143c4d4942f4ebbaf4fd1b">make_anyset</a> (Elements &amp;&amp;... elements, const HashFn &amp;hash_fn=HashFn(), const KeyEqual &amp;<a class="el" href="structte_1_1AnySet.html#a58b7e99fd9f0725a1874533f519c3ff1">key_eq</a>=KeyEqual(), const Allocator &amp;alloc=HashFn())</td></tr>
-<tr class="memdesc:a2fa591e523143c4d4942f4ebbaf4fd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for creating an <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance from a heterogeneous sequence of objects.  <a href="#a2fa591e523143c4d4942f4ebbaf4fd1b">More...</a><br /></td></tr>
-<tr class="separator:a2fa591e523143c4d4942f4ebbaf4fd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f5e3d8b50e29058da468f72a533dcd"><td class="memTemplParams" colspan="2">template&lt;class HashFn  = te::AnyHash, class KeyEqual  = std::equal_to&lt;&gt;, class Allocator  = std::allocator&lt;te::AnyValue&lt;HashFn, KeyEqual&gt;&gt;, class ... Elements&gt; </td></tr>
+<tr class="memitem:ae4f5e3d8b50e29058da468f72a533dcd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structte_1_1AnySet.html">te::AnySet</a>&lt; HashFn, KeyEqual, Allocator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnySet.html#ae4f5e3d8b50e29058da468f72a533dcd">make_anyset</a> (Elements &amp;&amp;... elements)</td></tr>
+<tr class="memdesc:ae4f5e3d8b50e29058da468f72a533dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for creating an <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance from a heterogeneous sequence of objects.  <a href="#ae4f5e3d8b50e29058da468f72a533dcd">More...</a><br /></td></tr>
+<tr class="separator:ae4f5e3d8b50e29058da468f72a533dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a4c2cffe66078db7aa7916cdac9badfc6"></a>
@@ -3757,8 +3757,8 @@ No iterators are invalidated by this function, but iterators pointing into <code
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a2fa591e523143c4d4942f4ebbaf4fd1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fa591e523143c4d4942f4ebbaf4fd1b">&#9670;&nbsp;</a></span>make_anyset()</h2>
+<a id="ae4f5e3d8b50e29058da468f72a533dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4f5e3d8b50e29058da468f72a533dcd">&#9670;&nbsp;</a></span>make_anyset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3772,30 +3772,8 @@ template&lt;class HashFn  = te::AnyHash, class KeyEqual  = std::equal_to&lt;&gt;
           <td class="memname"><a class="el" href="structte_1_1AnySet.html">te::AnySet</a>&lt; HashFn, KeyEqual, Allocator &gt; make_anyset </td>
           <td>(</td>
           <td class="paramtype">Elements &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>elements</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>elements</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const HashFn &amp;&#160;</td>
-          <td class="paramname"><em>hash_fn</em> = <code>HashFn()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const KeyEqual &amp;&#160;</td>
-          <td class="paramname"><em>key_eq</em> = <code>KeyEqual()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Allocator &amp;&#160;</td>
-          <td class="paramname"><em>alloc</em> = <code>HashFn()</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -3806,12 +3784,17 @@ template&lt;class HashFn  = te::AnyHash, class KeyEqual  = std::equal_to&lt;&gt;
 </div><div class="memdoc">
 
 <p>Helper function for creating an <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance from a heterogeneous sequence of objects. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">HashFn</td><td>- The type of the function object for the <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance created. (optional) </td></tr>
+    <tr><td class="paramname">KeyEqual</td><td>- The type of the function object for the <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance created. (optional) </td></tr>
+    <tr><td class="paramname">Allocator</td><td>- The type of the allocator for the <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance created. (optional)</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">elements</td><td>- Parameter pack of values to initialize the set's contents with. </td></tr>
-    <tr><td class="paramname">hash_fn</td><td>- The hash function for the set. </td></tr>
-    <tr><td class="paramname">key_eq</td><td>- The equality comparison function for the set. </td></tr>
-    <tr><td class="paramname">alloc</td><td>- The allocator for the set.</td></tr>
+    <tr><td class="paramname">elements</td><td>- Parameter pack of values to initialize the set's contents with.</td></tr>
   </table>
   </dd>
 </dl>
