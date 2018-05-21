@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>any-set-docs: te::AnySet&lt; HashFn, KeyEqual, Allocator &gt; Struct Template Reference</title>
+<title>AnySet Documentation: te::AnySet&lt; HashFn, KeyEqual, Allocator &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">any-set-docs
+   <div id="projectname">AnySet Documentation
    </div>
   </td>
  </tr>
@@ -58,7 +58,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>te</b></li><li class="navelem"><a class="el" href="structte_1_1AnySet.html">AnySet</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacete.html">te</a></li><li class="navelem"><a class="el" href="structte_1_1AnySet.html">AnySet</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -66,9 +66,10 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#related">Related Functions</a> &#124;
 <a href="structte_1_1AnySet-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">te::AnySet&lt; HashFn, KeyEqual, Allocator &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__AnySet-Module.html">AnySet-Module</a></div></div>  </div>
+<div class="title">te::AnySet&lt; HashFn, KeyEqual, Allocator &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -449,6 +450,15 @@ Friends</h2></td></tr>
 <tr class="memitem:a37c46f2275e85ea21dfd2919fe0981fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1AnySet.html#a37c46f2275e85ea21dfd2919fe0981fd">operator!=</a> (const <a class="el" href="structte_1_1AnySet.html">AnySet</a> &amp;left, const <a class="el" href="structte_1_1AnySet.html">AnySet</a> &amp;right)</td></tr>
 <tr class="memdesc:a37c46f2275e85ea21dfd2919fe0981fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare the contents of two sets.  <a href="#a37c46f2275e85ea21dfd2919fe0981fd">More...</a><br /></td></tr>
 <tr class="separator:a37c46f2275e85ea21dfd2919fe0981fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
+Related Functions</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>(Note that these are not member functions.) </p>
+</td></tr>
+<tr class="memitem:a2fa591e523143c4d4942f4ebbaf4fd1b"><td class="memTemplParams" colspan="2">template&lt;class HashFn  = te::AnyHash, class KeyEqual  = std::equal_to&lt;&gt;, class Allocator  = std::allocator&lt;te::AnyValue&lt;HashFn, KeyEqual&gt;&gt;, class ... Elements&gt; </td></tr>
+<tr class="memitem:a2fa591e523143c4d4942f4ebbaf4fd1b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structte_1_1AnySet.html">te::AnySet</a>&lt; HashFn, KeyEqual, Allocator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnySet.html#a2fa591e523143c4d4942f4ebbaf4fd1b">make_anyset</a> (Elements &amp;&amp;... elements, const HashFn &amp;hash_fn=HashFn(), const KeyEqual &amp;<a class="el" href="structte_1_1AnySet.html#a58b7e99fd9f0725a1874533f519c3ff1">key_eq</a>=KeyEqual(), const Allocator &amp;alloc=HashFn())</td></tr>
+<tr class="memdesc:a2fa591e523143c4d4942f4ebbaf4fd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for creating an <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance from a heterogeneous sequence of objects.  <a href="#a2fa591e523143c4d4942f4ebbaf4fd1b">More...</a><br /></td></tr>
+<tr class="separator:a2fa591e523143c4d4942f4ebbaf4fd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a4c2cffe66078db7aa7916cdac9badfc6"></a>
@@ -3747,6 +3757,68 @@ No iterators are invalidated by this function, but iterators pointing into <code
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a2fa591e523143c4d4942f4ebbaf4fd1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fa591e523143c4d4942f4ebbaf4fd1b">&#9670;&nbsp;</a></span>make_anyset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class HashFn  = te::AnyHash, class KeyEqual  = std::equal_to&lt;&gt;, class Allocator  = std::allocator&lt;te::AnyValue&lt;HashFn, KeyEqual&gt;&gt;, class ... Elements&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structte_1_1AnySet.html">te::AnySet</a>&lt; HashFn, KeyEqual, Allocator &gt; make_anyset </td>
+          <td>(</td>
+          <td class="paramtype">Elements &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>elements</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const HashFn &amp;&#160;</td>
+          <td class="paramname"><em>hash_fn</em> = <code>HashFn()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const KeyEqual &amp;&#160;</td>
+          <td class="paramname"><em>key_eq</em> = <code>KeyEqual()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Allocator &amp;&#160;</td>
+          <td class="paramname"><em>alloc</em> = <code>HashFn()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper function for creating an <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance from a heterogeneous sequence of objects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elements</td><td>- Parameter pack of values to initialize the set's contents with. </td></tr>
+    <tr><td class="paramname">hash_fn</td><td>- The hash function for the set. </td></tr>
+    <tr><td class="paramname">key_eq</td><td>- The equality comparison function for the set. </td></tr>
+    <tr><td class="paramname">alloc</td><td>- The allocator for the set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A newly-constructed <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a> instance that contains the provided elements. </dd></dl>
+
+</div>
+</div>
 <a id="a37c46f2275e85ea21dfd2919fe0981fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37c46f2275e85ea21dfd2919fe0981fd">&#9670;&nbsp;</a></span>operator!=</h2>
 
@@ -3897,8 +3969,10 @@ Inheritance diagram for te::AnySet&lt; HashFn, KeyEqual, Allocator &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="structte_1_1AnySet__inherit__graph.png" border="0" usemap="#te_1_1AnySet_3_01HashFn_00_01KeyEqual_00_01Allocator_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="te_1_1AnySet_3_01HashFn_00_01KeyEqual_00_01Allocator_01_4_inherit__map" id="te_1_1AnySet_3_01HashFn_00_01KeyEqual_00_01Allocator_01_4_inherit__map">
-<area shape="rect" id="node2" href="structte_1_1CompressedPair.html" title="te::CompressedPair\l\&lt; HashFn, KeyEqual \&gt;" alt="" coords="116,169,272,211"/>
-<area shape="rect" id="node3" href="structte_1_1detail_1_1CompressedPairBase.html" title="te::detail::CompressedPair\lBase\&lt; HashFn \&gt;" alt="" coords="5,80,183,121"/>
+<area shape="rect" id="node2" href="structte_1_1CompressedPair.html" title="te::CompressedPair\l\&lt; HashFn, KeyEqual \&gt;" alt="" coords="123,169,279,211"/>
+<area shape="rect" id="node3" href="structte_1_1detail_1_1CompressedPairBase.html" title="te::detail::CompressedPair\lBase\&lt; HashFn \&gt;" alt="" coords="8,80,185,121"/>
+<area shape="rect" id="node4" href="structte_1_1ValueHolder.html" title="te::ValueHolder\&lt; HashFn \&gt;" alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node5" href="structte_1_1ValueHolder.html" title="te::ValueHolder\&lt; KeyEqual \&gt;" alt="" coords="210,87,402,114"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -3906,12 +3980,14 @@ Collaboration diagram for te::AnySet&lt; HashFn, KeyEqual, Allocator &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="structte_1_1AnySet__coll__graph.png" border="0" usemap="#te_1_1AnySet_3_01HashFn_00_01KeyEqual_00_01Allocator_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="te_1_1AnySet_3_01HashFn_00_01KeyEqual_00_01Allocator_01_4_coll__map" id="te_1_1AnySet_3_01HashFn_00_01KeyEqual_00_01Allocator_01_4_coll__map">
-<area shape="rect" id="node2" href="structte_1_1CompressedPair.html" title="te::CompressedPair\l\&lt; HashFn, KeyEqual \&gt;" alt="" coords="116,169,272,211"/>
-<area shape="rect" id="node3" href="structte_1_1detail_1_1CompressedPairBase.html" title="te::detail::CompressedPair\lBase\&lt; HashFn \&gt;" alt="" coords="5,80,183,121"/>
+<area shape="rect" id="node2" href="structte_1_1CompressedPair.html" title="te::CompressedPair\l\&lt; HashFn, KeyEqual \&gt;" alt="" coords="123,169,279,211"/>
+<area shape="rect" id="node3" href="structte_1_1detail_1_1CompressedPairBase.html" title="te::detail::CompressedPair\lBase\&lt; HashFn \&gt;" alt="" coords="8,80,185,121"/>
+<area shape="rect" id="node4" href="structte_1_1ValueHolder.html" title="te::ValueHolder\&lt; HashFn \&gt;" alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node5" href="structte_1_1ValueHolder.html" title="te::ValueHolder\&lt; KeyEqual \&gt;" alt="" coords="210,87,402,114"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/tim/Projects/any-hash/include/anyset/<a class="el" href="AnySet_8h_source.html">AnySet.h</a></li>
+<li>/home/tim/Projects/AnySet/include/anyset/<a class="el" href="AnySet_8h_source.html">AnySet.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

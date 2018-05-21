@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>any-set-docs: AnySet Docs</title>
+<title>AnySet Documentation: AnySet Docs</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">any-set-docs
+   <div id="projectname">AnySet Documentation
    </div>
   </td>
  </tr>
@@ -62,7 +62,24 @@ $(function() {
 <div class="title">AnySet Docs </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>AnySet is a <a href="http://en.cppreference.com/w/cpp/container/unordered_set">std::unordered_set&lt;&gt;</a>-like container that can hold instances of any constructible type. AnySet uses type erasure to store values of arbitrary types uniformly. </p>
+<div class="textblock"><h2><a href="https://github.com/tvanslyke/AnySet">Main Project Page</a></h2>
+<h3><a href="https://github.com/tvanslyke/AnySet/doc/tutorial">Tutorial</a></h3>
+<p><a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">te::AnySet</a> is a <a href="http://en.cppreference.com/w/cpp/container/unordered_set">std::unordered_set</a>-like container that can hold instances of any constructible type.</p>
+<p>The <a href="https://github.com/tvanslyke/AnySet/doc/tutorial">tutorial</a> on the main project page provides examples and is a good starting point for working with AnySet and its surrounding infrastructure.</p>
+<h2>Quick Reference</h2>
+<ul>
+<li><a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">te::AnySet</a> - A type-erased hash set.<ul>
+<li><a class="el" href="SetOperations_8h.html">SetOperations.h</a> - Free functions and operator overloads for common set operations on <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">te::AnySet</a> instances.</li>
+</ul>
+</li>
+<li><a class="el" href="structte_1_1AnyValue.html">te::AnyValue</a> - Type of elements stored in AnySet instances.</li>
+<li><a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">te::AnyHash</a> - Generic hash function object.<ul>
+<li><a class="el" href="structte_1_1Hash.html" title="Function object that implements a hash function for instances of type T. Inherits from std::hash&lt;T&gt; u...">te::Hash</a> - Customization point for <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">te::AnyHash</a>.</li>
+<li><a class="el" href="structte_1_1AnyHash.html#a37a0e632c816a18e4a49cb3557beca65" title="Generic hash function. ">hash_value()</a> - Customization point for <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">te::AnyHash</a> (compatible with boost::container_hash).</li>
+<li><a class="el" href="extra-hash_8h.html">extra-hash.h</a> - Utilities for building hash functions, intended to be compatible with boost::container_hash. Also includes specializations of <a class="el" href="structte_1_1Hash.html" title="Function object that implements a hash function for instances of type T. Inherits from std::hash&lt;T&gt; u...">te::Hash</a> for standard types like std::pair and std::tuple. </li>
+</ul>
+</li>
+</ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

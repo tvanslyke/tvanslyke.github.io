@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>any-set-docs: te::AnyHash Struct Reference</title>
+<title>AnySet Documentation: te::AnyHash Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">any-set-docs
+   <div id="projectname">AnySet Documentation
    </div>
   </td>
  </tr>
@@ -58,7 +58,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>te</b></li><li class="navelem"><a class="el" href="structte_1_1AnyHash.html">AnyHash</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacete.html">te</a></li><li class="navelem"><a class="el" href="structte_1_1AnyHash.html">AnyHash</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -67,7 +67,7 @@ $(function() {
 <a href="#related">Related Functions</a> &#124;
 <a href="structte_1_1AnyHash-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">te::AnyHash Struct Reference<div class="ingroups"><a class="el" href="group__AnySet-Module.html">AnySet-Module</a></div></div>  </div>
+<div class="title">te::AnyHash Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -75,7 +75,7 @@ $(function() {
 <p>This is the default hash type for <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">te::AnySet</a>. Users should not specialize the operator() member function of this class.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1Hash.html" title="Function object that implements a hash function for instances of type T. Inherits from std::hash&lt;T&gt; u...">Hash</a> - A template class whose specializations determine the behavior of <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a>. </dd>
 <dd>
-<a class="el" href="group__AnySet-Module.html#ga4cb98ac2194be23f45f498005f35991a" title="Generic hash function. ">compute_hash()</a> - Provides and ADL-based approach to customizing the behavior of <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a>. </dd></dl>
+<a class="el" href="structte_1_1AnyHash.html#a37a0e632c816a18e4a49cb3557beca65" title="Generic hash function. ">hash_value()</a> - Provides and ADL-based approach to customizing the behavior of <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a>. </dd></dl>
 </div>
 <p><code>#include &lt;<a class="el" href="AnyHash_8h_source.html">AnyHash.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -90,10 +90,10 @@ Public Member Functions</h2></td></tr>
 Related Functions</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>(Note that these are not member functions.) </p>
 </td></tr>
-<tr class="memitem:ga4cb98ac2194be23f45f498005f35991a"><td class="memTemplParams" colspan="2">template&lt;class T , class  = std::enable_if_t&lt;detail::has_hash_specialization_v&lt;T&gt;&gt;&gt; </td></tr>
-<tr class="memitem:ga4cb98ac2194be23f45f498005f35991a"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__AnySet-Module.html#ga4cb98ac2194be23f45f498005f35991a">compute_hash</a> (const T &amp;value)</td></tr>
-<tr class="memdesc:ga4cb98ac2194be23f45f498005f35991a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic hash function.  <a href="group__AnySet-Module.html#ga4cb98ac2194be23f45f498005f35991a">More...</a><br /></td></tr>
-<tr class="separator:ga4cb98ac2194be23f45f498005f35991a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a0e632c816a18e4a49cb3557beca65"><td class="memTemplParams" colspan="2">template&lt;class T , class  = std::enable_if_t&lt;detail::has_hash_specialization_v&lt;T&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a37a0e632c816a18e4a49cb3557beca65"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structte_1_1AnyHash.html#a37a0e632c816a18e4a49cb3557beca65">hash_value</a> (const T &amp;value)</td></tr>
+<tr class="memdesc:a37a0e632c816a18e4a49cb3557beca65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic hash function.  <a href="#a37a0e632c816a18e4a49cb3557beca65">More...</a><br /></td></tr>
+<tr class="separator:a37a0e632c816a18e4a49cb3557beca65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a633a182424b2a32318c6c24b387d22b6"></a>
@@ -125,7 +125,7 @@ template&lt;class T &gt; </div>
 <p>Implements a generic hash function. </p>
 <p>Users should not specialize this member function. To modify the behavior of <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a> for different types, users can do one of two things:</p><ol type="1">
 <li>Specialize <code><a class="el" href="structte_1_1Hash.html" title="Function object that implements a hash function for instances of type T. Inherits from std::hash&lt;T&gt; u...">te::Hash</a>&lt;T&gt;</code> for the desired type <code>T</code>, providing a default constructor and member function <code>std::size_t <a class="el" href="structte_1_1Hash.html" title="Function object that implements a hash function for instances of type T. Inherits from std::hash&lt;T&gt; u...">te::Hash</a>&lt;T&gt;::operator()(const T&amp;)</code>.</li>
-<li>Provide an overload of <code>std::size_t <a class="el" href="group__AnySet-Module.html#ga4cb98ac2194be23f45f498005f35991a" title="Generic hash function. ">compute_hash(const T&amp;)</a></code> in the same namespace as type <code>T</code>, which will be found by ADL in AnyHash::operator()`.</li>
+<li>Provide an overload of <code>std::size_t <a class="el" href="structte_1_1AnyHash.html#a37a0e632c816a18e4a49cb3557beca65" title="Generic hash function. ">hash_value(const T&amp;)</a></code> in the same namespace as type <code>T</code>, which will be found by ADL in AnyHash::operator()`.</li>
 </ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -136,12 +136,55 @@ template&lt;class T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>the computed hash of <code>value</code>.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1Hash.html" title="Function object that implements a hash function for instances of type T. Inherits from std::hash&lt;T&gt; u...">Hash</a> - A template class whose specializations determine the behavior of <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a>. </dd>
 <dd>
-<a class="el" href="group__AnySet-Module.html#ga4cb98ac2194be23f45f498005f35991a" title="Generic hash function. ">compute_hash()</a> - Provides and ADL-based approach to customizing the behavior of <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a>. </dd></dl>
+<a class="el" href="structte_1_1AnyHash.html#a37a0e632c816a18e4a49cb3557beca65" title="Generic hash function. ">hash_value()</a> - Provides and ADL-based approach to customizing the behavior of <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a>. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a37a0e632c816a18e4a49cb3557beca65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a0e632c816a18e4a49cb3557beca65">&#9670;&nbsp;</a></span>hash_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class  = std::enable_if_t&lt;detail::has_hash_specialization_v&lt;T&gt;&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t hash_value </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generic hash function. </p>
+<p>Users can customize the behavior of <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a> by providing an overload of <a class="el" href="structte_1_1AnyHash.html#a37a0e632c816a18e4a49cb3557beca65" title="Generic hash function. ">hash_value()</a> in the same namespace that their own classes are declared in. <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a> makes an unqualified call to <a class="el" href="structte_1_1AnyHash.html#a37a0e632c816a18e4a49cb3557beca65" title="Generic hash function. ">hash_value()</a> like so: </p><div class="fragment"><div class="line"><span class="keyword">using</span> te::hash_value;</div><div class="line"><span class="keywordflow">return</span> <a class="code" href="structte_1_1AnyHash.html#a37a0e632c816a18e4a49cb3557beca65">hash_value</a>(value);</div></div><!-- fragment --><p>This allows ADL to find overloads of <a class="el" href="structte_1_1AnyHash.html#a37a0e632c816a18e4a49cb3557beca65" title="Generic hash function. ">hash_value()</a> in the namespace that <code>value's</code> type is defined in. This is the same method that boost::container_hash uses, so existing overloads of <a class="el" href="structte_1_1AnyHash.html#a37a0e632c816a18e4a49cb3557beca65" title="Generic hash function. ">hash_value()</a> intended for boost::container_hash will also work here.</p>
+<p>te::hash_value() otherwise uses <a class="el" href="structte_1_1Hash.html" title="Function object that implements a hash function for instances of type T. Inherits from std::hash&lt;T&gt; u...">te::Hash</a> to compute <code>value's</code> hash code. If <a class="el" href="structte_1_1Hash.html" title="Function object that implements a hash function for instances of type T. Inherits from std::hash&lt;T&gt; u...">te::Hash</a> has no specialization for <code>value's</code> type, then te::hash_value() is removed from overload resolution via SFINAE.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>- object to compute the hash code for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::invoke(te::Hash&lt;T&gt;{}, value)</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structte_1_1Hash.html" title="Function object that implements a hash function for instances of type T. Inherits from std::hash&lt;T&gt; u...">Hash</a> - A template class whose specializations determine the behavior of <a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a>. </dd>
+<dd>
+<a class="el" href="structte_1_1AnyHash.html" title="Generic hash function object. ">AnyHash</a> - The default hash function type for <a class="el" href="structte_1_1AnySet.html" title="AnySet is an associative container that contains a set of unique objects of any constructible type...">AnySet</a>. </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/tim/Projects/any-hash/include/anyset/<a class="el" href="AnyHash_8h_source.html">AnyHash.h</a></li>
+<li>/home/tim/Projects/AnySet/include/anyset/<a class="el" href="AnyHash_8h_source.html">AnyHash.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
